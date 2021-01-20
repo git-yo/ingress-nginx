@@ -36,6 +36,7 @@ RUN apk update \
   && apk upgrade \
   && apk add --no-cache \
     diffutils \
+    adduser www-data \
   && rm -rf /var/cache/apk/*
 
 COPY --chown=www-data:www-data etc /etc
